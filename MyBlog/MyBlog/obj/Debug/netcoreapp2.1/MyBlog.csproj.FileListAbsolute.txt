@@ -1,0 +1,14 @@
+C:\Users\efe\source\repos\MyBlog\MyBlog\bin\Debug\netcoreapp2.1\MyBlog.deps.json
+C:\Users\efe\source\repos\MyBlog\MyBlog\bin\Debug\netcoreapp2.1\MyBlog.runtimeconfig.json
+C:\Users\efe\source\repos\MyBlog\MyBlog\bin\Debug\netcoreapp2.1\MyBlog.runtimeconfig.dev.json
+C:\Users\efe\source\repos\MyBlog\MyBlog\bin\Debug\netcoreapp2.1\MyBlog.dll
+C:\Users\efe\source\repos\MyBlog\MyBlog\bin\Debug\netcoreapp2.1\MyBlog.pdb
+C:\Users\efe\source\repos\MyBlog\MyBlog\obj\Debug\netcoreapp2.1\MyBlog.csproj.CoreCompileInputs.cache
+C:\Users\efe\source\repos\MyBlog\MyBlog\obj\Debug\netcoreapp2.1\MyBlog.RazorAssemblyInfo.cache
+C:\Users\efe\source\repos\MyBlog\MyBlog\obj\Debug\netcoreapp2.1\MyBlog.RazorAssemblyInfo.cs
+C:\Users\efe\source\repos\MyBlog\MyBlog\obj\Debug\netcoreapp2.1\MyBlog.AssemblyInfoInputs.cache
+C:\Users\efe\source\repos\MyBlog\MyBlog\obj\Debug\netcoreapp2.1\MyBlog.AssemblyInfo.cs
+C:\Users\efe\source\repos\MyBlog\MyBlog\obj\Debug\netcoreapp2.1\MyBlog.RazorTargetAssemblyInfo.cache
+C:\Users\efe\source\repos\MyBlog\MyBlog\obj\Debug\netcoreapp2.1\MyBlog.dll
+C:\Users\efe\source\repos\MyBlog\MyBlog\obj\Debug\netcoreapp2.1\MyBlog.pdb
+C:\Users\efe\source\repos\MyBlog\MyBlog\obj\Debug\netcoreapp2.1\MyBlog.csprojAssemblyReference.cache
