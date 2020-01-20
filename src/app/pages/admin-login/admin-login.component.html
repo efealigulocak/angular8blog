@@ -1,0 +1,17 @@
+<app-page-title [title]="'Admin Giriş Paneli'"></app-page-title>
+
+
+
+
+<div class="example-container">
+  <mat-form-field>
+    <input #emailInput matInput placeholder="Email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input #passwordInput matInput placeholder="Password">
+  </mat-form-field>
+
+  <button (click)="login(emailInput.value,passwordInput.value)" mat-raised-button color="accent">Giriş</button>
+
+  </div>

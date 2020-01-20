@@ -1,0 +1,74 @@
+<div class="card bg-light" style="height:500px" *ngIf="articleService.loading">
+<div class="card-body text-center">
+<h1>Yükleniyor</h1>
+
+
+  <div class="spinner-border text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner-border text-secondary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner-border text-success" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner-border text-danger" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner-border text-warning" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner-border text-info" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner-border text-light" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner-border text-dark" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+
+</div>
+
+
+</div>
+
+
+
+<div *ngIf="!articleService.loading" class="card border-primary">
+  <div class="card-header">
+
+    <h3>{{article.title}}</h3>
+    <div>
+      <span class="badge badge-pill badge-dark">
+        <i class="fa  fa-calendar"></i> {{ article.publishDate | date: "dd.MM.yyyy" }}
+      </span>
+      <span class="mr-1"></span>
+      <span class="badge badge-pill badge-success">
+        <i class="fa  fa-folder"></i> {{ category.name }}
+      </span>
+      <span class="mr-1"></span>
+      <span class="badge badge-pill badge-success">
+        <i class="fa  fa-eye"></i> {{ article.viewCount }}
+      </span>
+      <span class="mr-1"></span>
+
+      <span class="badge badge-pill badge-primary">
+        <i class="fa  fa-comment"></i> {{ article.commentCount }}
+      </span>
+
+
+
+    </div>
+
+  </div>
+
+<div class="card-body">
+  <div class="ck ck-content" [innerHTML]="article.contentMain">
+
+  </div>
+
+
+</div>
+
+</div>

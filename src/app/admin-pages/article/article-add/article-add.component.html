@@ -1,0 +1,112 @@
+<div class="row mt-5">
+  <div class="col-md-7">
+    <form
+      *ngIf="info == null"
+      (ngSubmit)="onSubmit()"
+      [formGroup]="articleForm"
+    >
+      <div class="form-container">
+        <mat-form-field>
+          <input
+            type="text"
+            placeholder="Kategori Seç"
+            formControlName="category"
+            matInput
+            [matAutocomplete]="auto"
+          />
+          <mat-error *ngIf="getControls.category.invalid">
+            {{
+              myValidationService.getValidationMessages(
+                getControls.category,
+                "kategori"
+              )
+            }}
+          </mat-error>
+
+          <mat-autocomplete
+            [displayWith]="displayCategoryName"
+            #auto="matAutocomplete"
+          >
+            <mat-option *ngFor="let item of categories" [value]="item">
+              {{ item.name }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field>
+          <input formControlName="title" matInput placeholder="Makale İsmi" />
+
+          <mat-error *ngIf="getControls.category.invalid">
+            {{
+              myValidationService.getValidationMessages(
+                getControls.title,
+                "Makale İsmi"
+              )
+            }}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            formControlName="contentSummary"
+            matInput
+            placeholder="Makale Özeti"
+          />
+
+          <mat-error *ngIf="getControls.category.invalid">
+            {{
+              myValidationService.getValidationMessages(
+                getControls.contentSummary,
+                "Makale Özeti"
+              )
+            }}
+          </mat-error>
+        </mat-form-field>
+        <div style="border: 1px solid black" class="mb-2">
+          <ckeditor
+          (ready)="onReady($event)"
+          formControlName="contentMain"
+          [editor]="Editor"
+        ></ckeditor>
+            </div>
+
+        <button
+          class="mt-2"
+          [disabled]="loading"
+          color="primary"
+          mat-raised-button
+        >
+          <span
+            *ngIf="loading"
+            class="spinner-border spinner-border-sm"
+            role="status"
+            aria-hidden="true"
+          ></span>
+          Gönder
+        </button>
+      </div>
+    </form>
+    <div role="alert" *ngIf="info != null" class="aler alert-danger mt-3">
+      {{ info }}
+    </div>
+  </div>
+
+  <div class="col-md-5">
+    <div class="card text-white bg-primary">
+      <div class="card-header">Makale Resim</div>
+      <div class="card-body">
+        <img
+          [src]="picture || 'assets/article_empty.png'"
+          class="img-thumbnail"
+        />
+      </div>
+
+      <div class="card-footer">
+        <input
+          (change)="upload($event)"
+          type="file"
+          class="form-control"
+          name="image"
+        />
+      </div>
+    </div>
+  </div>
+</div>
