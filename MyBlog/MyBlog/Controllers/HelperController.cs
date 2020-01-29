@@ -34,7 +34,7 @@ namespace MyBlog.Controllers
                 smtpClient.EnableSsl = true;
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-                smtpClient.Credentials = new System.Net.NetworkCredential("aliefegulocak@gmail.com","Tosmerspreyi2162");
+                smtpClient.Credentials = new System.Net.NetworkCredential("aliefegulocak@gmail.com","password");
 
                 smtpClient.Send(mailMessage);
 
